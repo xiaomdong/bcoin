@@ -47,8 +47,15 @@ process.on('unhandledRejection', (err, promise) => {
 (async () => {
   await node.ensure();
   await node.open();
+  console.log("111111111111111111111111111111111111111111111111111111111111");
   await node.connect();
+  console.log("222222222222222222222222222222222222222222222222222222222222");
+  // console.log(node);
+  console.log(node.chain.synced);
+  node.chain.synced = true;
+  console.log(node.chain.synced);
   node.startSync();
+  console.log("444444444444444444444444444444444444444444444444444444444444");
 })().catch((err) => {
   console.error(err.stack);
   process.exit(1);

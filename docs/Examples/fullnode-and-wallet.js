@@ -3,6 +3,10 @@ const bcoin = require('../..').set('main');
 const walletPlugin = bcoin.wallet.plugin;
 
 const node = new bcoin.FullNode({
+  config: true,
+  listen: true,
+  workers:true,
+  memory: false,
   checkpoints: true,
   // Primary wallet passphrase
   passsphrase: 'node',

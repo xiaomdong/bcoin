@@ -84,8 +84,13 @@ class NodeContext {
   }
 
   startSync() {
+    console.log("node-context startSync+++++++++++++++++++++++++++++++++++++++++")
     for (const node of this.nodes) {
       node.chain.synced = true;
+      console.log(" node.chain.synced = true 2====================================================1")
+      console.log(" node.chain.synced = true 2====================================================2")
+      console.log(" node.chain.synced = true 2====================================================3")
+      console.log(" node.chain.synced = true 2====================================================4")
       node.chain.emit('full');
       node.startSync();
     }
